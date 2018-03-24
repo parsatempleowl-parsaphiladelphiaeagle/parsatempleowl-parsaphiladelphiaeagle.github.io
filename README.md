@@ -1,1 +1,0 @@
-# parsatempleowl-parsaphiladelphiaeagle.github.io
