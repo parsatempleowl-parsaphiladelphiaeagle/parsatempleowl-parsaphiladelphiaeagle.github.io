@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Games</title>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body bgcolor="#EFFD82" text="#FFFFFF" link="#00FFFF" vlink="#CCFF00" alink="#FFCC33" onLoad="MM_preloadImages('images/navigation/rollover/aboutme1.gif','images/navigation/rollover/logos1.gif','images/navigation/rollover/usstates1.gif','images/navigation/rollover/games1.gif','images/navigation/rollover/bikes1.gif','images/navigation/rollover/bodysystems1.gif','images/navigation/rollover/usairlines1.gif','images/navigation/rollover/animals1.gif','images/navigation/rollover/cityofphiladelphia1.gif','images/navigation/rollover/philadelphiaeagles1.gif','images/navigation/rollover/imagemap1.gif','images/navigation/rollover/form1.gif')">
+<div align="center">
+  <table width="74%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr>
+      <td height="19" bgcolor="#8E8E8E"></tr>
+    <td height="20" bgcolor="#8E8E8E"><td height="20"><td height="3" bgcolor="#8E8E8E"><tr>
+        <td height="64" bgcolor="#3A3A3A"><table border="0" width="200" cellspacing="0" cellpadding="3">
+<form name="where">
+  <tr>
+    <td width="100%">
+<select name="city" size="1" onchange="updateclock(this);"> 
+<option value="" selected>Local time</option>
+<option value="0">London GMT</option> 
+<option value="1">Rome</option>
+<option value="7">Bangkok</option>
+<option value="8">Hong Kong</option>
+<option value="9">Tokyo</option> 
+<option value="10">Sydney</option>
+<option value="12">Fiji</option>
+<option value="-10">Hawaii</option>
+<option value="-8">San Francisco</option> 
+<option value="-5">New York</option>
+<option value="-3">Buenos Aires</option>
+</select>
+
+</td>
+  </tr>
+  <tr>
+    <td width="100%">
+<script language="JavaScript">
+
+/*
+Drop Down World Clock- By JavaScript Kit (http://www.javascriptkit.com)
+Portions of code by Kurt @ http://www.btinternet.com/~kurt.grigg/javascript
+This credit notice must stay intact
+*/
+
+if (document.all||document.getElementById)
+document.write('<span id="worldclock" style="font:bold 16px Arial;"></span><br />')
+
+zone=0;
+isitlocal=true;
+ampm='';
+
+function updateclock(z){
+zone=z.options[z.selectedIndex].value;
+isitlocal=(z.options[0].selected)?true:false;
+}
+
+function WorldClock(){
+now=new Date();
+ofst=now.getTimezoneOffset()/60;
+secs=now.getSeconds();
+sec=-1.57+Math.PI*secs/30;
+mins=now.getMinutes();
+min=-1.57+Math.PI*mins/30;
+hr=(isitlocal)?now.getHours():(now.getHours() + parseInt(ofst)) + parseInt(zone);
+hrs=-1.575+Math.PI*hr/6+Math.PI*parseInt(now.getMinutes())/360;
+if (hr < 0) hr+=24;
+if (hr > 23) hr-=24;
+ampm = (hr > 11)?"PM":"AM";
+statusampm = ampm.toLowerCase();
+
+hr2 = hr;
+if (hr2 == 0) hr2=12;
+(hr2 < 13)?hr2:hr2 %= 12;
+if (hr2<10) hr2="0"+hr2
+
+var finaltime=hr2+':'+((mins < 10)?"0"+mins:mins)+':'+((secs < 10)?"0"+secs:secs)+' '+statusampm;
+
+if (document.all)
+worldclock.innerHTML=finaltime
+else if (document.getElementById)
+document.getElementById("worldclock").innerHTML=finaltime
+else if (document.layers){
+document.worldclockns.document.worldclockns2.document.write(finaltime)
+document.worldclockns.document.worldclockns2.document.close()
+}
+
+
+setTimeout('WorldClock()',1000);
+}
+
+window.onload=WorldClock
+//-->
+</script>
+
+<!--Place holder for NS4 only-->
+
+</td>
+</form>
+  </tr>
+</table>&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="#8E8E8E"><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About Me','','images/navigation/rollover/aboutme1.gif',1)"><img src="images/navigation/rollover/aboutme.gif" alt="" width="150" height="55" id="About Me"></a><a href="logos.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Logos','','images/navigation/rollover/logos1.gif',1)"><img src="images/navigation/rollover/logos.gif" alt="" width="150" height="55" id="Logos"></a><a href="us states.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('US States','','images/navigation/rollover/usstates1.gif',1)"><img src="images/navigation/rollover/usstates.gif" alt="" width="150" height="55" id="US States"></a><a href="games.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Games','','images/navigation/rollover/games1.gif',1)"><img src="images/navigation/rollover/games.gif" alt="" width="150" height="55" id="Games"></a><a href="bikes.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Bikes','','images/navigation/rollover/bikes1.gif',1)"><img src="images/navigation/rollover/bikes.gif" alt="" width="150" height="55" id="Bikes"></a><a href="body systems.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Body Systems','','images/navigation/rollover/bodysystems1.gif',1)"><img src="images/navigation/rollover/bodysystems.gif" alt="" width="150" height="55" id="Body Systems"></a><a href="us airlines.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('US Airlines','','images/navigation/rollover/usairlines1.gif',1)"><img src="images/navigation/rollover/usairlines.gif" alt="" width="150" height="55" id="US Airlines"></a><a href="animals.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Animals','','images/navigation/rollover/animals1.gif',1)"><img src="images/navigation/rollover/animals.gif" alt="" width="150" height="55" id="Animals"></a><a href="philly.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('City of Philadelphia','','images/navigation/rollover/cityofphiladelphia1.gif',1)"><img src="images/navigation/rollover/cityofphiladelphia.gif" alt="" width="150" height="55" id="City of Philadelphia"></a><a href="eagles.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Philadelphia Eagles','','images/navigation/rollover/philadelphiaeagles1.gif',1)"><img src="images/navigation/rollover/philadelphiaeagles.gif" alt="" width="150" height="55" id="Philadelphia Eagles"></a><a href="imap.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image Map','','images/navigation/rollover/imagemap1.gif',1)"><img src="images/navigation/rollover/imagemap.gif" alt="" width="150" height="55" id="Image Map"></a><a href="form.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Form','','images/navigation/rollover/form1.gif',1)"><img src="images/navigation/rollover/form.gif" alt="" width="150" height="55" id="Form"></a></td>
+      </tr>
+      <tr>
+        <td height="797" align="left" valign="top" bgcolor="#8E8E8E"><p><span class="ListofGames">List of Games</span>:</p>
+          <ul>
+            <li>
+              <p><a href="hang man.html" target="_blank">Hang Man</a></p>
+            </li>
+            <li>
+              <p><a href="guess my number.html" target="_blank">Guess My Number</a></p>
+            </li>
+            <li>
+              <p><a href="tic tac toe.html" target="_blank">Tic Tac Toe</a></p>
+            </li>
+            <li>
+              <p><a href="age counter.html" target="_blank">Age Counter</a></p>
+            </li>
+            <li>
+              <p><a href="reflex tester.html" target="_blank">Reflex Tester</a></p>
+            </li>
+            <li>
+              <p><a href="the love test.html" target="_blank">The Love Test</a></p>
+            </li>
+            <li>
+              <p><a href="chinese zodiac.html" target="_blank">Chinese Zodiac</a></p>
+            </li>
+            <li>
+              <p><a href="mind guesser.html" target="_blank">Mind Guesser</a></p>
+            </li>
+            <li>
+              <p><a href="crystal ball.html" target="_blank">Crystal Ball</a>            </p>
+            </li>
+        </ul></td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="#8E8E8E"><a href="index.html">About Me</a> | <a href="logos.html">Logos</a> | <a href="us states.html">US States</a> | <a href="games.html">Games</a> | <a href="bikes.html">Bikes</a> | <a href="body systems.html">Body Systems</a> | <a href="us airlines.html">US Airlines</a> | <a href="animals.html">Animals</a> | <a href="philly.html">City of Philadelphia</a> | <a href="eagles.html">Philadelphia Eagles</a> | <a href="imap.html">Image Map  | Form</a></td>
+    </tr>
+      <tr>
+        <td bgcolor="#8E8E8E"><a href="mailto:tug81042@temple.edu">Contact the web host</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
